@@ -1,4 +1,4 @@
-const urlBase = 'https://ocampo-dev.wicode.com.mx/api/v1/apoyo';
+const urlBase = 'https://ocampo-dev.wicode.com.mx/api/v1/apoyos';
 const url = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=UTEL"
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //getApoyosSync();
     //getApoyosAsync();
     //createApoyoAsync();
-    // pendiente - updateApoyoAsync();
-    deleteApoyoAsync()
+    updateApoyoAsync();
+    //deleteApoyoAsync()
 
 });
 
@@ -52,7 +52,7 @@ const createApoyoAsync = async () => {
 
 // Peticiones PUT/UPDATE penditente
 const updateApoyoAsync = async () => {
-    const response = await fetch(urlBase + "/yLmJdzjpQRB6lfLUW67V", {
+    const response = await fetch(urlBase + "/9eOmYqMM5AVSQqtTb9Zz", {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -74,7 +74,7 @@ const updateApoyoAsync = async () => {
 
 // Peticion DELETE
 const deleteApoyoAsync = async () => {
-    const response = await fetch(urlBase + "/yCJAi2bU63olYm8XKRcx", {
+    const response = await fetch(urlBase + "/yLmJdzjpQRB6lfLUW67V", {
         method: "DELETE",
     });
     const json = await response.json();
